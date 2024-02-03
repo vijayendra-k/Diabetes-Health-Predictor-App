@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <!-- Add any additional styles or scripts here -->
+</head>
+<body>
+    <h1>Diabetes Prediction</h1>
+    
+    <form action="/predict" method="post">
+        <label for="HighBP">High Blood Pressure:</label>
+        <select id="HighBP" name="HighBP" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br><br>
+
+        <label for="HighChol">High Cholesterol:</label>
+        <select id="HighChol" name="HighChol" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br><br>
+        
+        <label for="BMI">BMI:</label>
+        <input type="number" id="BMI" name="BMI" required min="1" max="100"><br><br>
+
+        <label for="Smoker">Smoker:</label>
+        <select id="Smoker" name="Smoker" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br><br>
+
+        <label for="Stroke">Stroke:</label>
+        <select id="Stroke" name="Stroke" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br><br>
+
+        <label for="PhysActivity">PhysActivity:</label>
+        <select id="PhysActivity" name="PhysActivity" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br><br>
+
+        <label for="Fruits">Fruits Intake:</label>
+        <select id="Fruits" name="Fruits" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br><br>
+
+        <label for="Veggies">Veggies Intake:</label>
+        <select id="Veggies" name="Veggies" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br><br>
+
+        <label for="AnyHealthcare">Any Health Care?</label>
+        <select id="AnyHealthcare" name="AnyHealthcare" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br><br>
+
+        <label for="GenHlth">General Health:</label>
+        <select id="GenHlth" name="GenHlth" required>
+            <option value="5">Excellent</option>
+            <option value="4">Very Good</option>
+            <option value="3">Good</option>
+            <option value="2">Worse</option>
+            <option value="1">Poor</option>
+        </select><br><br>
+
+        <label for="MentHlth">Mental Health: (How many poor Mental Health days in the last 30 days?)</label>
+        <input type="number" id="MentHlth" name="MentHlth" required min="0" max="30"><br><br>
+
+        <label for="PhysHlth">Physical Health: (How many poor Physical Health days in the last 30 days?)</label>
+        <input type="number" id="PhysHlth" name="PhysHlth" required min="0" max="30"><br><br>
+        
+        <label for="Sex">Sex</label>
+        <select id="Sex" name="Sex" required>
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+        </select><br><br>
+
+        <label for="Age">Age:</label>
+        <input type="number" id="Age" name="Age" required min="1" max="100"><br><br>
+
+        <label for="Education">Education:</label>
+        <select id="Education" name="Education" required>
+            <option value="6">Ph.D</option>
+            <option value="5">Post Graduation</option>
+            <option value="4">Graduation</option>
+            <option value="3">Higher School</option>
+            <option value="2">Primary School</option>
+            <option value="1">No Education</option>
+        </select><br><br>
+
+        <label for="Income">Income:</label>
+        <select id="Income" name="Income" required>
+            <option value="8">Greater than 120k$ USD</option>
+            <option value="7">Between 100k$ - 120k$ USD</option>
+            <option value="6">Between 85k$ - 100k$ USD</option>
+            <option value="5">Between 70k$ - 85k$ USD</option>
+            <option value="4">Between 55k$ - 70k$ USD</option>
+            <option value="3">Between 40k$ - 55k$ USD</option>
+            <option value="2">Between 20k$ - 40k$ USD</option>
+            <option value="1">Below 20k$ USD</option>
+        </select><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>

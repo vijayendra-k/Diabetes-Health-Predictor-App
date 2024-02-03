@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction Result</title>
+    <style>
+        /* Style to highlight the selected radio button */
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Diabetes Prediction Result</h1>
+    
+    {% if prediction in [0, 1, 2] %}
+        <p>The predicted diabetes status is:</p>
+        <form>
+            <label>
+                <input type="radio" name="diabetesStatus" value="No Diabetes" {% if prediction == 0 %}checked{% endif %} disabled> No Diabetes
+            </label><br>
+            <label>
+                <input type="radio" name="diabetesStatus" value="Pre-Diabetes" {% if prediction == 1 %}checked{% endif %} disabled> Pre-Diabetes
+            </label><br>
+            <label>
+                <input type="radio" name="diabetesStatus" value="Diabetes" {% if prediction == 2 %}checked{% endif %} disabled> Diabetes
+            </label><br>
+        </form>
+    {% else %}
+        <p>Invalid prediction value</p>
+    {% endif %}
+
+</body>
+</html>
