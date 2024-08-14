@@ -1,0 +1,1 @@
+This is a Diabetes Health Predictor App built using Python, Pandas, Machine Learning Algorithms, Flask, HTML and CSS.
